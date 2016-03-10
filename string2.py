@@ -27,11 +27,8 @@ def verbing(s):
 def not_bad(s):
     not_index = s.find('not')
     bad_index = s.find('bad')
-    extra = ''
-    if bad_index + 3 <= len(s):
-        extra = s[bad_index + 3:]
     if not_index < bad_index:
-        s = s[:not_index] + 'good' + extra
+        s = s[:not_index] + 'good' + s[bad_index + 3:]
     return s 
 
 
