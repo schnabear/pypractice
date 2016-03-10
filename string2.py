@@ -13,8 +13,7 @@ def verbing(s):
         return s
     if s.endswith('ing'):
         return s + 'ly'
-    else:
-        return s + 'ing'
+    return s + 'ing'
 
 
 # E. not_bad
