@@ -59,7 +59,7 @@ def print_words(filename):
 def print_top(filename):
     word_count = count_words(filename)
     word_count = [[word, count] for word, count in word_count.items()]
-    word_count = sorted(word_count, reverse=True, key=get_word_count)
+    word_count = sorted(word_count, reverse=True, key=get_last_element)
     counter = 0
     for word, count in word_count:
         print(word, count)
@@ -67,7 +67,7 @@ def print_top(filename):
         if counter >= 20:
             break;
 
-def get_word_count(a):
+def get_last_element(a):
     return a[-1]
 
 # This basic command line argument parsing code is provided and
